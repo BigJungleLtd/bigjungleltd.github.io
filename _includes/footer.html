@@ -1,0 +1,19 @@
+<footer class="site-footer h-card">
+  <div class="wrapper">
+    <div class="footer-content">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | escape }}. All rights reserved.</p>
+      
+      <div class="footer-links">
+        {% if site.email %}
+          <a href="mailto:{{ site.email }}">Email</a>
+        {% endif %}
+        
+        {% if site.github_username %}
+          <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+        {% endif %}
+        
+        <a href="{{ "/feed.xml" | relative_url }}">RSS</a>
+      </div>
+    </div>
+  </div>
+</footer>

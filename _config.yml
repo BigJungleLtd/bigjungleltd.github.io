@@ -1,3 +1,46 @@
-theme: jekyll-theme-minimal
-title: BigJungle's homepage
-description: Bookmark this to keep an eye on my project updates!
+# Site settings
+title: BigJungle Ltd
+email: jeremy@bigjungle.net
+description: >-
+  BigJungle Ltd - Technology, IoT, and Innovation
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://bigjungle.net" # the base hostname & protocol for your site
+github_username: jeremypoulter
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination (commented out since blog.md shows all posts)
+# paginate: 5
+# paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Squarespace-Wordpress-Export-05-17-2025.xml
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Jeremy Poulter"
