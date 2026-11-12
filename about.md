@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-## About BigJungle Ltd
+## About BigJungle
 
-BigJungle Ltd is focused on exploring and implementing innovative technology solutions, with a particular emphasis on:
+BigJungle is focused on exploring and implementing innovative technology solutions, with a particular emphasis on:
 
 - **Internet of Things (IoT)** - Connected devices and smart systems
 - **Smart Home Technology** - Home automation and energy monitoring
@@ -16,7 +16,7 @@ BigJungle Ltd is focused on exploring and implementing innovative technology sol
 
 ### Jeremy Poulter
 
-Founder and lead developer at BigJungle Ltd, with extensive experience in:
+Founder and lead developer at BigJungle, with extensive experience in:
 
 - Embedded systems development
 - IoT device design and implementation
