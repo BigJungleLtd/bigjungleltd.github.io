@@ -1,10 +1,10 @@
 # BigJungle.net
 
-This is the Jekyll-powered website for BigJungle Ltd, converted from a WordPress/Squarespace export and designed to be hosted on GitHub Pages.
+This is the Jekyll-powered website for BigJungle, converted from a WordPress/Squarespace export and designed to be hosted on GitHub Pages.
 
 ## About
 
-BigJungle Ltd focuses on IoT, smart home technology, and open-source hardware projects. This site contains blog posts covering:
+BigJungle focuses on IoT, smart home technology, and open-source hardware projects. This site contains blog posts covering:
 
 - Arduino and embedded systems projects
 - Smart home automation
@@ -110,4 +110,4 @@ To add a new blog post:
 
 ## License
 
-Content is copyright BigJungle Ltd. The Jekyll theme and site structure are open source.
+Content is copyright BigJungle. The Jekyll theme and site structure are open source.

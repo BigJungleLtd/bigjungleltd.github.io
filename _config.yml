@@ -1,8 +1,8 @@
 # Site settings
-title: BigJungle Ltd
+title: BigJungle
 email: jeremy@bigjungle.net
 description: >-
-  BigJungle Ltd - Technology, IoT, and Innovation
+  BigJungle - Technology, IoT, and Innovation
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bigjungle.net" # the base hostname & protocol for your site
 github_username: jeremypoulter

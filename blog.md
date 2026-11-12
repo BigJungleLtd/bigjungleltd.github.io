@@ -22,19 +22,10 @@ permalink: /blog/
           </p>
         </header>
         
-        {% if post.excerpt %}
-          <div class="post-excerpt">
-            {{ post.excerpt }}
-          </div>
-        {% endif %}
-        
-        {% if post.categories %}
-          <div class="post-categories">
-            {% for category in post.categories %}
-              <span class="category">{{ category }}</span>
-            {% endfor %}
-          </div>
-        {% endif %}
+        <div class="post-excerpt">
+          {{ post.excerpt | replace: '</p>', ' ' | strip_html | strip_newlines | truncatewords: 40 }}
+          <a class="read-more" href="{{ post.url | relative_url }}">Read more &raquo;</a>
+        </div>
       </article>
     {% endfor %}
   </div>
@@ -81,16 +72,10 @@ permalink: /blog/
   line-height: 1.6;
 }
 
-.post-categories {
-  margin-top: 1rem;
-}
-
-.category {
-  background: #f0f0f0;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  margin-right: 0.5rem;
-  color: #666;
+.read-more {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #667eea;
+  text-decoration: none;
 }
 </style>

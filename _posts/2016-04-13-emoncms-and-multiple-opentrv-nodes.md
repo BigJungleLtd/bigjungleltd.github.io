@@ -22,6 +22,8 @@ To get these to talk to each other we need to ensure the firmware for on the rec
 
 With the new firmware built and flashed it is time to power up and see what we get. Load up the Node-RED UI with the work sheet we created last time. Turn off all the debug nodes apart from the last one of the switch node. This will now only show the console output we are not parsing, (you may need to wait about 10 mins to see anything).
 
+![Image 1 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/01.webp)
+
 You should see some JSON output that looks suspiciously like the end of the status lines from last time. It is probably of no surprise that in fact in is the same format as the JSON part of the status text. So we already have the code to parse this text.
 
 ## Parsing The Output
@@ -33,6 +35,8 @@ First things first though, we need to separate out the JSON lines from the rest 
 ```
 
 This will now pull out the JSON by detecting the opening `{`.
+
+![Image 2 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/02.png)
 
 Now connect a new function node to a new switch output and grab the JSON code we wrote before:
 
@@ -79,6 +83,8 @@ Now all that is left to do disconnect the function output to the EmonCMS node, o
 
 Place a function node after the two parsing nodes and before the EmonCMS node:
 
+![Image 4 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/04.webp)
+
 Our parsing code is writing the OpenTRV ID in to `msg.nodeid` and if the `Node` setting is left blank the EmonCMS node will use `msg.nodegroup` for the `Node`. This can be done with the following:
 
 ```javascript
@@ -98,11 +104,19 @@ You will need to alter the content of `nodeMapping` for your environment.
 
 As we are dealing with more than just `msg.payload` it is handy to debug the whole `msg object`. To do this you can open a debug node's settings (double click it) and change the Output to `complete msg object`.
 
+![Image 5 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/05.webp)
+
 The other change we need to make is to clear the fixed `Node` setting in the EmonCMS node. Open the EmonCMS node settings and delete anything in the `Node` setting. Don't worry if the setting highlights red, this can be ignored as we are passing in the setting for this value. A warning may also be given when deploying, this too can be ignored.
+
+![Image 6 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/06.png)
 
 We can now deploy the sheet and it should look something like this.
 
+![Image 7 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/07.webp)
+
 If all is working you should now see all the OpenTRV nodes showing data in your EmonCMS.
+
+![Image 8 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/08.png)
 
 ## Making Improvements
 
@@ -111,3 +125,12 @@ We could leave it there, but there is a bit of tidy up we can do to help reduce 
 Instead of parsing the JSON in the `OpenTRV Parse Status` we can pass the JSON along to the `OpenTRV Parse JSON` node so it can be parse there. Let's disconnect the output of the `OpenTRV Parse Status` from the EmonCMS node and to the input of the `OpenTRV Parse JSON` so we have a unified parsing approach.
 
 This approach provides a more maintainable solution for handling multiple OpenTRV nodes and ensures consistent data processing across all connected devices.
+
+
+## Images
+
+![Image 3 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/03.webp)
+
+![Image 9 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/09.webp)
+
+![Image 10 from the original post](/assets/images/2016-04-13-emoncms-and-multiple-opentrv-nodes/10.webp)

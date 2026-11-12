@@ -22,9 +22,13 @@ First of all we need to get the data from the OpenTRV devices. In my setup this 
 
 That is it for the hardware, but how do we get the data into Node-RED? For this we need the Serial node.
 
+![Image 1 from the original post](/assets/images/2016-03-09-experiments-with-node-red/01.webp)
+
 ## Setting Up the Serial Connection
 
 Drag one of these nodes to the workspace and double click to open the settings. You'll need to configure:
+
+![Image 2 from the original post](/assets/images/2016-03-09-experiments-with-node-red/02.webp)
 
 - **Serial Port**: The COM port your USB-TTL adapter is connected to
 - **Baud Rate**: Typically 4800 for OpenTRV devices
@@ -41,6 +45,8 @@ Use a switch node to route different types of messages based on content patterns
 
 ### Function Nodes
 Create custom JavaScript functions to parse the OpenTRV status strings and extract meaningful data points.
+
+![Image 7 from the original post](/assets/images/2016-03-09-experiments-with-node-red/07.png)
 
 ### Debug Nodes
 Essential for monitoring data flow and troubleshooting your Node-RED flows.
@@ -73,3 +79,38 @@ This initial experiment with Node-RED has opened up many possibilities for expan
 - Advanced data processing and alerting
 
 Node-RED proves to be an excellent tool for bridging different IoT protocols and services, making it much easier to create comprehensive monitoring and automation systems.
+
+
+## Images
+
+![Image 3 from the original post](/assets/images/2016-03-09-experiments-with-node-red/03.webp)
+
+![Image 4 from the original post](/assets/images/2016-03-09-experiments-with-node-red/04.webp)
+
+![Image 5 from the original post](/assets/images/2016-03-09-experiments-with-node-red/05.webp)
+
+![Image 6 from the original post](/assets/images/2016-03-09-experiments-with-node-red/06.png)
+
+![Image 8 from the original post](/assets/images/2016-03-09-experiments-with-node-red/08.webp)
+
+![Image 9 from the original post](/assets/images/2016-03-09-experiments-with-node-red/09.webp)
+
+![Image 10 from the original post](/assets/images/2016-03-09-experiments-with-node-red/10.webp)
+
+![Image 11 from the original post](/assets/images/2016-03-09-experiments-with-node-red/11.webp)
+
+![Image 12 from the original post](/assets/images/2016-03-09-experiments-with-node-red/12.webp)
+
+![Image 13 from the original post](/assets/images/2016-03-09-experiments-with-node-red/13.webp)
+
+![Image 14 from the original post](/assets/images/2016-03-09-experiments-with-node-red/14.webp)
+
+![Image 15 from the original post](/assets/images/2016-03-09-experiments-with-node-red/15.webp)
+
+![Image 16 from the original post](/assets/images/2016-03-09-experiments-with-node-red/16.webp)
+
+![Image 17 from the original post](/assets/images/2016-03-09-experiments-with-node-red/17.png)
+
+![Image 18 from the original post](/assets/images/2016-03-09-experiments-with-node-red/18.webp)
+
+![Image 19 from the original post](/assets/images/2016-03-09-experiments-with-node-red/19.webp)
