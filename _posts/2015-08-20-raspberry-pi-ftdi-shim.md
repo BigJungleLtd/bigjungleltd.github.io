@@ -111,3 +111,16 @@ The FTDI shim approach offers several advantages:
 The Raspberry Pi FTDI shim is a simple but valuable tool for anyone working with serial communication in IoT and embedded projects. Its ease of use and reliability make it an essential component in the embedded developer's toolkit.
 
 Whether you're flashing firmware, debugging sensor networks, or monitoring data streams, this small adapter can significantly improve your development workflow and system reliability.
+
+
+## Images
+
+![Image 1 from the original post](/assets/images/2015-08-20-raspberry-pi-ftdi-shim/01.webp)
+
+![Image 2 from the original post](/assets/images/2015-08-20-raspberry-pi-ftdi-shim/02.webp)
+
+![Image 3 from the original post](/assets/images/2015-08-20-raspberry-pi-ftdi-shim/03.png)
+
+![Image 4 from the original post](/assets/images/2015-08-20-raspberry-pi-ftdi-shim/04.jpg)
+
+![Image 5 from the original post](/assets/images/2015-08-20-raspberry-pi-ftdi-shim/05.webp)
